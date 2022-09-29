@@ -116,16 +116,15 @@ border: 1px solid #ECECEC;
   padding-bottom: 32px;
 }
 
-.header-contact{
-  align-items: center;
-  margin-left: auto;
-}
-
 .header-link {
   display: flex;
- margin-left: auto;
+  margin-left: auto;
+  align-items: center;
+  gap: 30px;
+}
  
-  
+  .header-mail,
+  .header-tel{
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -138,12 +137,19 @@ border: 1px solid #ECECEC;
   margin-right: 0;
 }
 
-
-.header-mail,
+.header-mail:hover,
+.header-mail:focus,
 .header-tel:hover,
-.header-mail,
-.header-tel:focus {
-  color: #2196f3;
+.header-tel:focus,
+.header-connect-icon:hover
+.header-connect-icon:focus{
+color:var(--accent-color);
+fill:#2196f3;
+}
+
+.header-connect-icon{
+  fill:currentColor;
+  margin-right: 10px;
 }
 
 /* HERO */
@@ -153,6 +159,20 @@ border: 1px solid #ECECEC;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+ 
+}
+
+.overlay{
+  max-width: 1600px;
+  height: 636px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images4/heroBG.jpg) ;
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+   
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .hero-title {
@@ -221,7 +241,39 @@ border: 1px solid #ECECEC;
 .hero-link:nth-child(4){
     margin-right:0;
  }
+ 
 
+ .hero-link::before {
+  content: "";
+  display: inline-block;
+  width: 270px;
+  height: 120px;
+  border-radius:4px ;
+  background-color: #F5F4FA;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+
+ .icon-sputnik::before{
+  background-image: url(../images4/sputnik.svg);
+  margin-bottom: 30px;
+ }
+
+ .icon-clock::before{ 
+  background-image:url(../images4/clock.svg);
+  margin-bottom: 30px;
+ }
+
+ .icon-comp::before{
+  background-image: url(../images4/comp.svg);
+  margin-bottom: 30px;
+ }
+
+ .icon-astronaut::before{
+  background-image: url(../images4/astronaut.svg);
+  margin-bottom: 30px;
+ }
+ 
 
 /* buttons web studio and portfolio  */
 
@@ -257,6 +309,7 @@ border: 1px solid #ECECEC;
 .portfolio-button:focus {
   color: #ffffff;
   background-color: #2196f3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
  /* ------------------------------IMAGES------------------------- */
 
@@ -322,6 +375,11 @@ border: 1px solid #ECECEC;
   width: calc( (100% - 60px) / 3) ;
 }
 
+.team-item{
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+}
+
 .team-item,
 .team-person {
   font-weight: 500;
@@ -335,6 +393,8 @@ border: 1px solid #ECECEC;
 .team-description{
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: var(--main-text-color);
+ 
 }
 
 .team-person{
@@ -342,6 +402,8 @@ border: 1px solid #ECECEC;
 }
 
 .team-process {
+  margin-bottom: 16px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
@@ -350,18 +412,90 @@ border: 1px solid #ECECEC;
   color: #757575;
 }
 
+.team-soc-list{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+ 
+
+}
+
+.team-soc-link{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color:var(--main-text-color);
+  display: block;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .team-connect-icon{
+  fill:#AFB1B8;
+ }
+
+ .team-soc-link:hover,
+ .team-soc-link:focus{
+  background-color: var(--accent-color);
+ }
+
+ .team-soc-link:hover .team-connect-icon,
+ .team-soc-link:focus .team-connect-icon{
+ fill:#FFFFFF;
+ }
+
+ /* ---------------------------------------CLIENTS--------------------------------- */
+
+ .clients{
+  padding-top: 94px;
+  padding-bottom: 94px;
+ }
+
+ .clients-title{
+display: flex;
+justify-content: center;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.16;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #212121;
+
+margin-bottom: 50px;
+}
+
+.clients-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.clients-link{
+width: 170px;
+height: 90px;
+
+border: 1px solid #AFB1B8;
+border-radius: 4px;
+}
 /* --------------------------------------FOOTER--------------------------------- */
 
 .footer {
- 
   padding-top: 60px;
   padding-bottom: 60px;
  
-
   background-color: #2f303a;
   margin-left: auto;
   margin-right: 0;
- }
+
+  display: flex;
+  align-items: baseline;
+  }
 
  .footer-logo{
   margin-bottom: 20px;
@@ -384,13 +518,60 @@ border: 1px solid #ECECEC;
   letter-spacing: 0.03em;
   font-style: normal;
   color: var(--main-text-color);
-}
+  }
+
 .footer-mail,
 .footer-tel {
   text-decoration: none;
-  
   color: rgba(255, 255, 255, 0.6);
 }
+
+.footer-text{
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.143;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: var(--main-text-color);
+margin-bottom: 20px;
+}
+
+.find-soc-list{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.find-soc-link{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color:rgba(255, 255, 255, 0.1);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .footer-connect-icon{
+  fill:var(--main-text-color)
+ }
+
+ .find-soc-link:hover,
+ .find-soc-link:focus{
+  background-color: var(--accent-color);
+ }
+
+ .find-soc-link:hover .footer-connect-icon,
+ .find-soc-link:focus .footer-connect-icon{
+ fill:#FFFFFF;
+}
+
+
 /* -----------------------------------------------PORTFOLIO-------------------------------------- */
 .portfolio{
   padding-top: 94px;
@@ -417,6 +598,14 @@ portfolio-list:nth-child(5n){
   box-sizing: border-box;
   background: #ffffff;
   border: 1px solid #eeeeee;
+  }
+
+.portfolio-image{
+  display: block;
+}
+
+.portfolio-image:hover{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .image-link:nth-child(3n) {
@@ -429,9 +618,7 @@ portfolio-list:nth-child(5n){
 
 .main {
   margin-top: 34px;
-
   padding-bottom: 94px;
-
 } 
 
 .main-list {
