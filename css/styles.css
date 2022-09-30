@@ -494,13 +494,17 @@ border-radius: 4px;
   margin-right: 0;
 }
 
+.footer-left{
+  margin-right: 154px;
+}
+
   .footer-links{
   margin-right: auto;
   }
 
-   .footer-common{
-    display: flex;
-    align-items: baseline;
+  .footer-common{
+  display: flex;
+  align-items: baseline;
   } 
 
  .footer-logo{
@@ -536,6 +540,8 @@ border-radius: 4px;
   align-items: baseline;
 }
 .footer-text{
+/* display: flex;   */
+margin-bottom: 20px;
 
 font-family: 'Roboto';
 font-style: normal;
@@ -545,13 +551,7 @@ line-height: 1.143;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 
-
 color: var(--main-text-color);
-display: flex;
-margin-bottom: 20px;
-
-justify-content: center;
-
 }
 
 .find-soc-list{
