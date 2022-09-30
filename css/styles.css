@@ -492,10 +492,16 @@ border-radius: 4px;
   background-color: #2f303a;
   margin-left: auto;
   margin-right: 0;
+}
 
-  display: flex;
-  align-items: baseline;
+  .footer-links{
+  margin-right: auto;
   }
+
+   .footer-common{
+    display: flex;
+    align-items: baseline;
+  } 
 
  .footer-logo{
   margin-bottom: 20px;
@@ -526,6 +532,9 @@ border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-soc-links{
+  align-items: baseline;
+}
 .footer-text{
 
 font-family: 'Roboto';
@@ -536,13 +545,19 @@ line-height: 1.143;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 
+
 color: var(--main-text-color);
+display: flex;
 margin-bottom: 20px;
+
+justify-content: center;
+
 }
 
 .find-soc-list{
+  display: block;
   display: flex;
-  justify-content: center;
+  justify-content:baseline;
   gap: 10px;
 }
 
