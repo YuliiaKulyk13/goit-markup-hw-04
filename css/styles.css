@@ -451,14 +451,15 @@ width: 1600px; */
     border-color:#afb1b8;
   }
   
-.clients-link:hover{
-  border: 1px solid var(--accent-color);
+.clients-link:hover
+.clients-link:focus{
   cursor: pointer;
 }
 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
   fill: var(--accent-color);
+  border-color:var(--accent-color);
 }
 /* --------------------------------------FOOTER--------------------------------- */
 
