@@ -451,7 +451,7 @@ width: 1600px; */
     border-color:#afb1b8;
   }
   
-.clients-link:hover
+.clients-link:hover,
 .clients-link:focus{
   cursor: pointer;
 }
@@ -460,6 +460,11 @@ width: 1600px; */
 .clients-link:focus .clients-icon {
   fill: var(--accent-color);
   border-color:var(--accent-color);
+}
+
+.clients-icon:hover,
+.clients-icon:focus{
+  fill:var(--accent-color);
 }
 /* --------------------------------------FOOTER--------------------------------- */
 
